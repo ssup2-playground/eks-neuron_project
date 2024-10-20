@@ -2,7 +2,7 @@
 
 eks-neuron is prototyping project for testing inferentia/trainium instances based on EKS. eks-neuron project consists of the following git repositories.
 
-* [aws-terraform](https://github.com/aws-playground/eks-neuron_aws-terraform) : Terraform for EKS cluster and 
+* [aws-terraform](https://github.com/aws-playground/eks-neuron_aws-terraform) : Terraform for EKS cluster and inferentia/trainium instances.
 * [inf1-serving-app](https://github.com/aws-playground/eks-neuron_inf1-serving-app) : ML model serving application based on inferentia 1 and FastAPI.
 
 ## Architecture
