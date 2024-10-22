@@ -3,7 +3,7 @@
 eks-neuron is prototyping project for testing inferentia/trainium instances based on EKS. eks-neuron project consists of the following git repositories.
 
 * [aws-terraform](https://github.com/ssup2-playground/eks-neuron_aws-terraform) : Terraform for EKS cluster and inferentia/trainium instances.
-* [inf1-serving-app](https://github.com/ssup2-playground/eks-neuron_inf1-serving-app) : ML model serving application based on inferentia 1 and FastAPI.
+* [serving-inf1-app](https://github.com/ssup2-playground/eks-neuron_serving-inf1-app) : ML model serving application based on inferentia 1 and FastAPI.
 
 ## Architecture
 
@@ -31,8 +31,20 @@ eks-neuron is prototyping project for testing inferentia/trainium instances base
 
 * based on inferentia 1 and FastAPI
 * serving app uses my-scheduler to allocate mutiple inferentia cores sequentially
-* "/resnet50" API
+
+* Get serving API endpoints
 ```shell
-$ curl -F "file=@images/kitten_small.jpg" http://k8s-app-serving-ee77c9be69-dcc0560def0a4bd6.elb.ap-northeast-2.amazonaws.com/resnet50
+$ echo http://$(kubectl -n app get service serving-inf1 --output jsonpath='{.status.loadBalancer.ingress[0].hostname}')
+http://k8s-app-servingi-6f94fb09a3-32c0217cb413f5b4.elb.ap-northeast-2.amazonaws.com
+```
+
+* API Examples
+```shell
+# /restnet50 API
+$ curl -F "file=@images/kitten_small.jpg" http://k8s-app-servingi-6f94fb09a3-32c0217cb413f5b4.elb.ap-northeast-2.amazonaws.com/resnet50
 {"tabby":"0.5812537670135498","Egyptian_cat":"0.22762224078178406","tiger_cat":"0.10100676119327545","lynx":"0.07389812916517258","tiger":"0.010001023299992085"}
 ```
+
+## Monitoring
+
+### Login Grafana
