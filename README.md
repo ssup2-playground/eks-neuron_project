@@ -46,3 +46,24 @@ $ curl -F "file=@images/kitten_small.jpg" http://k8s-app-servingi-6f94fb09a3-32c
 ## Monitoring
 
 ### Login Grafana
+
+* Set grafana NLB security Group
+```
+$ MY_IP=$(curl -s https://checkip.amazonaws.com/)
+$ SG_ID=$(aws ec2 describe-security-groups --filters Name=tag:Name,Values=eks-neuron-grafana-sg --query "SecurityGroups[*].GroupId" --output text)
+$ aws ec2 authorize-security-group-ingress --group-id "$SG_ID" --protocol tcp --port 80 --cidr "$MY_IP/32"
+```
+
+* Get grafana `admin` user password
+```
+$ kubectl -n observability get secrets grafana -o jsonpath='{.data.admin-password}' | base64 --decode
+ugnQJC5Sgg3WkuHi7k8le4U3oB1f9EKhj2G4uS48
+```
+
+* Get grafana endpoint
+```shell
+$ echo http://$(kubectl -n observability get service grafana --output jsonpath='{.status.loadBalancer.ingress[0].hostname}')
+http://k8s-observab-grafana-e4e76fb41d-a64e31df8c64616d.elb.ap-northeast-2.amazonaws.com
+```
+
+### Access 
