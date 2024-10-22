@@ -27,20 +27,18 @@ eks-neuron is prototyping project for testing inferentia/trainium instances base
 * Neuron monitor provides inferentia/trainium metrics to prometheus server. 
 * Node problem detector detects failure inferentia/trainium cores.
 
-## Inf1 Serving App
+## Serving Inf1 App
 
 * based on inferentia 1 and FastAPI
 * serving app uses my-scheduler to allocate mutiple inferentia cores sequentially
-
 * Get serving API endpoints
 ```shell
 $ echo http://$(kubectl -n app get service serving-inf1 --output jsonpath='{.status.loadBalancer.ingress[0].hostname}')
 http://k8s-app-servingi-6f94fb09a3-32c0217cb413f5b4.elb.ap-northeast-2.amazonaws.com
 ```
-
 * API Examples
 ```shell
-# /restnet50 API
+# "/restnet50" API
 $ curl -F "file=@images/kitten_small.jpg" http://k8s-app-servingi-6f94fb09a3-32c0217cb413f5b4.elb.ap-northeast-2.amazonaws.com/resnet50
 {"tabby":"0.5812537670135498","Egyptian_cat":"0.22762224078178406","tiger_cat":"0.10100676119327545","lynx":"0.07389812916517258","tiger":"0.010001023299992085"}
 ```
