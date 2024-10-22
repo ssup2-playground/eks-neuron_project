@@ -1,0 +1,251 @@
+# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 392.0
+python_gc_objects_collected_total{generation="1"} 0.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 48.0
+python_gc_collections_total{generation="1"} 4.0
+python_gc_collections_total{generation="2"} 0.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="8",patchlevel="10",version="3.8.10"} 1.0
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 1.81395456e+08
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 2.1774336e+07
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1.72959331883e+09
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 0.36
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 6.0
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 1.048576e+06
+# HELP execution_errors_total Execution errors total
+# TYPE execution_errors_total counter
+execution_errors_total{availability_zone="ap-northeast-2c",error_type="generic",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+execution_errors_total{availability_zone="ap-northeast-2c",error_type="numerical",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+execution_errors_total{availability_zone="ap-northeast-2c",error_type="transient",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+execution_errors_total{availability_zone="ap-northeast-2c",error_type="model",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+execution_errors_total{availability_zone="ap-northeast-2c",error_type="runtime",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+execution_errors_total{availability_zone="ap-northeast-2c",error_type="hardware",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+# HELP execution_errors_created Execution errors total
+# TYPE execution_errors_created gauge
+execution_errors_created{availability_zone="ap-northeast-2c",error_type="generic",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210349653e+09
+execution_errors_created{availability_zone="ap-northeast-2c",error_type="numerical",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210349877e+09
+execution_errors_created{availability_zone="ap-northeast-2c",error_type="transient",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210350015e+09
+execution_errors_created{availability_zone="ap-northeast-2c",error_type="model",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210350137e+09
+execution_errors_created{availability_zone="ap-northeast-2c",error_type="runtime",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210350256e+09
+execution_errors_created{availability_zone="ap-northeast-2c",error_type="hardware",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210350378e+09
+# HELP execution_status_total Execution status total
+# TYPE execution_status_total counter
+execution_status_total{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",status_type="completed",subnet_id="subnet-04e5831292d6401ad"} 1.0
+execution_status_total{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",status_type="completed_with_err",subnet_id="subnet-04e5831292d6401ad"} 0.0
+execution_status_total{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",status_type="completed_with_num_err",subnet_id="subnet-04e5831292d6401ad"} 0.0
+execution_status_total{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",status_type="timed_out",subnet_id="subnet-04e5831292d6401ad"} 0.0
+execution_status_total{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",status_type="incorrect_input",subnet_id="subnet-04e5831292d6401ad"} 0.0
+execution_status_total{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",status_type="failed_to_queue",subnet_id="subnet-04e5831292d6401ad"} 0.0
+# HELP execution_status_created Execution status total
+# TYPE execution_status_created gauge
+execution_status_created{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",status_type="completed",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210350714e+09
+execution_status_created{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",status_type="completed_with_err",subnet_id="subnet-04e5831292d6401ad"} 1.729593321035087e+09
+execution_status_created{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",status_type="completed_with_num_err",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210350986e+09
+execution_status_created{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",status_type="timed_out",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210351114e+09
+execution_status_created{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",status_type="incorrect_input",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210351229e+09
+execution_status_created{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",runtime_tag="1",status_type="failed_to_queue",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210351343e+09
+# HELP execution_latency_seconds Execution latency in seconds
+# TYPE execution_latency_seconds gauge
+execution_latency_seconds{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",percentile="p0",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.004323005676269531
+execution_latency_seconds{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",percentile="p1",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.004323005676269531
+execution_latency_seconds{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",percentile="p100",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.004323005676269531
+execution_latency_seconds{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",percentile="p25",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.004323005676269531
+execution_latency_seconds{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",percentile="p50",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.004323005676269531
+execution_latency_seconds{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",percentile="p75",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.004323005676269531
+execution_latency_seconds{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",percentile="p99",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.004323005676269531
+# HELP neuron_runtime_memory_used_bytes Runtime memory used bytes
+# TYPE neuron_runtime_memory_used_bytes gauge
+neuron_runtime_memory_used_bytes{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="host",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 2.605992e+06
+neuron_runtime_memory_used_bytes{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="neuron_device",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 6.3073904e+07
+# HELP neuroncore_memory_usage_constants NeuronCore memory utilization for constants
+# TYPE neuroncore_memory_usage_constants gauge
+neuroncore_memory_usage_constants{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="10",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_constants{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="11",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_constants{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="12",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_constants{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="13",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_constants{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="14",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_constants{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="15",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_constants{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="8",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 6.1766864e+07
+neuroncore_memory_usage_constants{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="9",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_constants{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="0",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 6.1766864e+07
+neuroncore_memory_usage_constants{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="1",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_constants{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="2",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_constants{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="3",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_constants{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="4",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_constants{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="5",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_constants{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="6",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_constants{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="7",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+# HELP neuroncore_memory_usage_model_code NeuronCore memory utilization for model_code
+# TYPE neuroncore_memory_usage_model_code gauge
+neuroncore_memory_usage_model_code{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="10",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_code{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="11",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_code{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="12",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_code{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="13",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_code{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="14",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_code{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="15",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_code{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="8",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 1.263776e+06
+neuroncore_memory_usage_model_code{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="9",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_code{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="0",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 1.263776e+06
+neuroncore_memory_usage_model_code{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="1",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_code{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="2",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_code{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="3",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_code{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="4",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_code{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="5",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_code{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="6",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_code{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="7",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+# HELP neuroncore_memory_usage_model_shared_scratchpad NeuronCore memory utilization for model_shared_scratchpad
+# TYPE neuroncore_memory_usage_model_shared_scratchpad gauge
+neuroncore_memory_usage_model_shared_scratchpad{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="10",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_shared_scratchpad{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="11",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_shared_scratchpad{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="12",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_shared_scratchpad{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="13",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_shared_scratchpad{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="14",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_shared_scratchpad{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="15",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_shared_scratchpad{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="8",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_shared_scratchpad{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="9",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_shared_scratchpad{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="0",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_shared_scratchpad{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="1",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_shared_scratchpad{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="2",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_shared_scratchpad{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="3",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_shared_scratchpad{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="4",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_shared_scratchpad{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="5",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_shared_scratchpad{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="6",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_model_shared_scratchpad{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="7",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+# HELP neuroncore_memory_usage_runtime_memory NeuronCore memory utilization for runtime_memory
+# TYPE neuroncore_memory_usage_runtime_memory gauge
+neuroncore_memory_usage_runtime_memory{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="10",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_runtime_memory{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="11",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_runtime_memory{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="12",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_runtime_memory{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="13",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_runtime_memory{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="14",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_runtime_memory{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="15",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_runtime_memory{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="8",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 43264.0
+neuroncore_memory_usage_runtime_memory{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="9",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_runtime_memory{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="0",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 43264.0
+neuroncore_memory_usage_runtime_memory{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="1",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_runtime_memory{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="2",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_runtime_memory{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="3",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_runtime_memory{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="4",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_runtime_memory{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="5",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_runtime_memory{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="6",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_runtime_memory{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="7",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+# HELP neuroncore_memory_usage_tensors NeuronCore memory utilization for tensors
+# TYPE neuroncore_memory_usage_tensors gauge
+neuroncore_memory_usage_tensors{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="10",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_tensors{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="11",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_tensors{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="12",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_tensors{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="13",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_tensors{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="14",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_tensors{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="15",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_tensors{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="8",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_tensors{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="9",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_tensors{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="0",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_tensors{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="1",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_tensors{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="2",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_tensors{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="3",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_tensors{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="4",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_tensors{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="5",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_tensors{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="6",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_memory_usage_tensors{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",memory_location="None",neuroncore="7",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+# HELP neuroncore_utilization_ratio NeuronCore utilization ratio
+# TYPE neuroncore_utilization_ratio gauge
+neuroncore_utilization_ratio{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuroncore="0",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_utilization_ratio{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuroncore="1",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_utilization_ratio{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuroncore="10",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_utilization_ratio{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuroncore="11",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_utilization_ratio{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuroncore="12",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_utilization_ratio{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuroncore="13",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_utilization_ratio{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuroncore="14",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_utilization_ratio{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuroncore="15",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_utilization_ratio{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuroncore="2",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_utilization_ratio{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuroncore="3",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_utilization_ratio{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuroncore="4",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_utilization_ratio{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuroncore="5",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_utilization_ratio{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuroncore="6",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_utilization_ratio{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuroncore="7",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_utilization_ratio{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuroncore="8",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+neuroncore_utilization_ratio{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuroncore="9",region="ap-northeast-2",runtime_tag="1",subnet_id="subnet-04e5831292d6401ad"} 0.0
+# HELP system_memory_total_bytes System memory total_bytes bytes
+# TYPE system_memory_total_bytes gauge
+system_memory_total_bytes{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 4.9318240256e+010
+# HELP system_memory_used_bytes System memory used_bytes bytes
+# TYPE system_memory_used_bytes gauge
+system_memory_used_bytes{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 9.722986496e+09
+# HELP system_swap_total_bytes System swap total_bytes bytes
+# TYPE system_swap_total_bytes gauge
+system_swap_total_bytes{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 0.0
+# HELP system_swap_used_bytes System swap used_bytes bytes
+# TYPE system_swap_used_bytes gauge
+system_swap_used_bytes{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 0.0
+# HELP hardware_ecc_events_total Hardware ecc events total
+# TYPE hardware_ecc_events_total counter
+hardware_ecc_events_total{availability_zone="ap-northeast-2c",event_type="mem_ecc_corrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="0",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 0.0
+hardware_ecc_events_total{availability_zone="ap-northeast-2c",event_type="mem_ecc_uncorrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="0",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 0.0
+hardware_ecc_events_total{availability_zone="ap-northeast-2c",event_type="sram_ecc_corrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="0",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 0.0
+hardware_ecc_events_total{availability_zone="ap-northeast-2c",event_type="sram_ecc_uncorrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="0",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 0.0
+hardware_ecc_events_total{availability_zone="ap-northeast-2c",event_type="mem_ecc_corrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="1",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 0.0
+hardware_ecc_events_total{availability_zone="ap-northeast-2c",event_type="mem_ecc_uncorrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="1",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 0.0
+hardware_ecc_events_total{availability_zone="ap-northeast-2c",event_type="sram_ecc_corrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="1",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 0.0
+hardware_ecc_events_total{availability_zone="ap-northeast-2c",event_type="sram_ecc_uncorrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="1",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 0.0
+hardware_ecc_events_total{availability_zone="ap-northeast-2c",event_type="mem_ecc_corrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="2",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 0.0
+hardware_ecc_events_total{availability_zone="ap-northeast-2c",event_type="mem_ecc_uncorrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="2",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 0.0
+hardware_ecc_events_total{availability_zone="ap-northeast-2c",event_type="sram_ecc_corrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="2",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 0.0
+hardware_ecc_events_total{availability_zone="ap-northeast-2c",event_type="sram_ecc_uncorrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="2",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 0.0
+hardware_ecc_events_total{availability_zone="ap-northeast-2c",event_type="mem_ecc_corrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="3",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 0.0
+hardware_ecc_events_total{availability_zone="ap-northeast-2c",event_type="mem_ecc_uncorrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="3",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 0.0
+hardware_ecc_events_total{availability_zone="ap-northeast-2c",event_type="sram_ecc_corrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="3",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 0.0
+hardware_ecc_events_total{availability_zone="ap-northeast-2c",event_type="sram_ecc_uncorrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="3",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 0.0
+# HELP hardware_ecc_events_created Hardware ecc events total
+# TYPE hardware_ecc_events_created gauge
+hardware_ecc_events_created{availability_zone="ap-northeast-2c",event_type="mem_ecc_corrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="0",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210369895e+09
+hardware_ecc_events_created{availability_zone="ap-northeast-2c",event_type="mem_ecc_uncorrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="0",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210370035e+09
+hardware_ecc_events_created{availability_zone="ap-northeast-2c",event_type="sram_ecc_corrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="0",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210370154e+09
+hardware_ecc_events_created{availability_zone="ap-northeast-2c",event_type="sram_ecc_uncorrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="0",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 1.729593321037027e+09
+hardware_ecc_events_created{availability_zone="ap-northeast-2c",event_type="mem_ecc_corrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="1",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210370393e+09
+hardware_ecc_events_created{availability_zone="ap-northeast-2c",event_type="mem_ecc_uncorrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="1",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210370526e+09
+hardware_ecc_events_created{availability_zone="ap-northeast-2c",event_type="sram_ecc_corrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="1",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210370638e+09
+hardware_ecc_events_created{availability_zone="ap-northeast-2c",event_type="sram_ecc_uncorrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="1",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 1.729593321037076e+09
+hardware_ecc_events_created{availability_zone="ap-northeast-2c",event_type="mem_ecc_corrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="2",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210370893e+09
+hardware_ecc_events_created{availability_zone="ap-northeast-2c",event_type="mem_ecc_uncorrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="2",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210371003e+09
+hardware_ecc_events_created{availability_zone="ap-northeast-2c",event_type="sram_ecc_corrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="2",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 1.729593321037111e+09
+hardware_ecc_events_created{availability_zone="ap-northeast-2c",event_type="sram_ecc_uncorrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="2",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210371222e+09
+hardware_ecc_events_created{availability_zone="ap-northeast-2c",event_type="mem_ecc_corrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="3",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210371351e+09
+hardware_ecc_events_created{availability_zone="ap-northeast-2c",event_type="mem_ecc_uncorrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="3",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 1.729593321037146e+09
+hardware_ecc_events_created{availability_zone="ap-northeast-2c",event_type="sram_ecc_corrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="3",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210371566e+09
+hardware_ecc_events_created{availability_zone="ap-northeast-2c",event_type="sram_ecc_uncorrected",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_index="3",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 1.7295933210371673e+09
+# HELP system_vcpu_count System vCPU count
+# TYPE system_vcpu_count gauge
+system_vcpu_count{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 24.0
+# HELP system_vcpu_usage_ratio System CPU utilization ratio
+# TYPE system_vcpu_usage_ratio gauge
+system_vcpu_usage_ratio{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad",usage_type="user"} 0.0016
+system_vcpu_usage_ratio{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad",usage_type="system"} 0.0012
+# HELP instance_info EC2 instance information
+# TYPE instance_info gauge
+instance_info{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 1.0
+# HELP neuron_hardware_info Neuron Hardware Information
+# TYPE neuron_hardware_info gauge
+neuron_hardware_info{availability_zone="ap-northeast-2c",instance_id="i-09455676d166b28aa",instance_name="",instance_type="inf1.6xlarge",neuron_device_count="4",neuroncore_per_device_count="4",region="ap-northeast-2",subnet_id="subnet-04e5831292d6401ad"} 1.0
+
