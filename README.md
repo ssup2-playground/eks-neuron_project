@@ -66,9 +66,8 @@ $ echo http://$(kubectl -n observability get service grafana --output jsonpath='
 http://k8s-observab-grafana-e4e76fb41d-a64e31df8c64616d.elb.ap-northeast-2.amazonaws.com
 ```
 
-* Login Grafana
 <img src="/images/grafana-login.png" width="400"/>
-
+* Login Grafana
   * ID : `admin`
   * Password : `kubectl -n observability get secrets grafana -o jsonpath='{.data.admin-password}' | base64 --decode ugnQJC5Sgg3WkuHi7k8le4U3oB1f9EKhj2G4uS48`
 
