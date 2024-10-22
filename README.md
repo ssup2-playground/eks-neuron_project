@@ -33,13 +33,15 @@ eks-neuron is prototyping project for testing inferentia/trainium instances base
 * serving app uses my-scheduler to allocate mutiple inferentia cores sequentially
 * Get serving API endpoints
 ```shell
-$ echo http://$(kubectl -n app get service serving-inf1 --output jsonpath='{.status.loadBalancer.ingress[0].hostname}')
+$ ENDPOINT_INF1=$(echo http://$(kubectl -n app get service serving-inf1 --output jsonpath='{.status.loadBalancer.ingress[0].hostname}'))
+$ echo $ENDPOINT_INF1
 http://k8s-app-servingi-6f94fb09a3-32c0217cb413f5b4.elb.ap-northeast-2.amazonaws.com
 ```
 * API Examples
 ```shell
 # "/restnet50" API
-$ curl -F "file=@images/kitten_small.jpg" http://k8s-app-servingi-6f94fb09a3-32c0217cb413f5b4.elb.ap-northeast-2.amazonaws.com/resnet50
+$ curl https://raw.githubusercontent.com/ssup2-playground/eks-neuron_serving-inf1-app/refs/heads/master/images/kitten_small.jpg -o kitten_small.jpg
+$ curl -F "file=@kitten_small.jpg" $echo $ENDPOINT_INF1/resnet50
 {"tabby":"0.5812537670135498","Egyptian_cat":"0.22762224078178406","tiger_cat":"0.10100676119327545","lynx":"0.07389812916517258","tiger":"0.010001023299992085"}
 ```
 
@@ -65,7 +67,6 @@ ugnQJC5Sgg3WkuHi7k8le4U3oB1f9EKhj2G4uS48
 $ echo http://$(kubectl -n observability get service grafana --output jsonpath='{.status.loadBalancer.ingress[0].hostname}')
 http://k8s-observab-grafana-e4e76fb41d-a64e31df8c64616d.elb.ap-northeast-2.amazonaws.com
 ```
-
 
 * Login Grafana
 
