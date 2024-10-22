@@ -68,6 +68,7 @@ http://k8s-observab-grafana-e4e76fb41d-a64e31df8c64616d.elb.ap-northeast-2.amazo
 
 
 * Login Grafana
+
   <img src="/images/grafana-login.png" width="400"/>
 
   * ID : `admin`
