@@ -78,3 +78,4 @@ http://k8s-observab-grafana-e4e76fb41d-a64e31df8c64616d.elb.ap-northeast-2.amazo
 ### Metric List
 
 * Neuron metric example : [example](neuron-metric-example.txt) 
+* Reference : https://awsdocs-neuron.readthedocs-hosted.com/en/latest/tools/neuron-sys-tools/neuron-monitor-user-guide.html
