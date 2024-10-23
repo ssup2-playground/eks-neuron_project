@@ -18,7 +18,8 @@ eks-neuron is prototyping project for testing inferentia/trainium instances base
 * Running prometheus server, my-scheduler and neuron-scheduler extender.
 * When multiple inferentia cores are assigned to one pod, my-scheduler and neuron-scheduler extender plays the role of allocating cores consecutively.
 * my-scheduler operates in active-standby mode and ensures high availability.
-* neuron-scheduler operates in active-active mode and ensures high availability.
+* neuron-scheduler operates in single-active mode and ensure high availability with recreation.
+  * neuron-scheduler doesn't support active-active or active-standby mode.
 
 ### "inf" Karpenter NodePool
 
