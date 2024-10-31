@@ -90,3 +90,15 @@ http://k8s-observab-grafana-e4e76fb41d-a64e31df8c64616d.elb.ap-northeast-2.amazo
 
 * Neuron metric example : [example](neuron-metric-example.txt) 
 * Reference : https://awsdocs-neuron.readthedocs-hosted.com/en/latest/tools/neuron-sys-tools/neuron-monitor-user-guide.html
+
+### Neuron Top
+
+* Access inferentia instance via SSH or SSM
+* Install and run neuron-top
+
+```shell
+$ yum install aws-neuronx-tools
+$ neuron-top
+```
+
+<img src="/images/neuron-top.png" width="800"/>
