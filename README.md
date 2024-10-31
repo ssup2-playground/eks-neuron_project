@@ -16,7 +16,7 @@ eks-neuron is prototyping project for testing inferentia/trainium instances base
 ### "add-on" Karpenter NodePool
 
 * Running prometheus server, my-scheduler and neuron-scheduler extender.
-* When multiple inferentia cores are assigned to one pod, my-scheduler and neuron-scheduler extender plays the role of allocating cores consecutively.
+* When multiple inferentia cores are assigned to one pod, **my-scheduler** and **neuron-scheduler** extender plays the role of allocating cores consecutively.
 * my-scheduler operates in active-standby mode and ensures high availability.
 * neuron-scheduler operates in single-active mode and ensure high availability with recreation.
   * neuron-scheduler doesn't support active-active or active-standby mode.
@@ -24,14 +24,14 @@ eks-neuron is prototyping project for testing inferentia/trainium instances base
 ### "inf" Karpenter NodePool
 
 * Running serving app, neuron device plugin, neuron monitor and node problem detector.
-* Neuron device plugin makes the kubelet aware of the inferentia core.
-* Neuron monitor provides inferentia/trainium metrics to prometheus server. 
-* Node problem detector detects failure inferentia/trainium cores.
+* **Neuron device plugin** makes the kubelet aware of the inferentia core.
+* **Neuron monitor** provides inferentia/trainium metrics to prometheus server. 
+* **Node problem detector** detects failure inferentia/trainium cores.
 
 ## Serving Inf1 App
 
 * based on inferentia 1 and FastAPI
-* serving app uses my-scheduler to allocate mutiple inferentia cores sequentially
+* serving app uses **my-scheduler** and **neuron-scheduler** to allocate mutiple inferentia cores sequentially
 
 * Get serving API endpoints
 ```shell
@@ -43,24 +43,24 @@ http://k8s-app-servingi-6f94fb09a3-32c0217cb413f5b4.elb.ap-northeast-2.amazonaws
 * API Examples
 ```shell
 # Testing ResNet50 model
-$ curl https://raw.githubusercontent.com/ssup2-playground/eks-neuron_serving-inf1-app/refs/heads/master/images/kitten_small.jpg -o kitten_small.jpg
+$ curl https://raw.githubusercontent.com/ssup2-playground/eks-neuron_serving-inf1-app/refs/heads/master/images/kitten.jpg -o kitten.jpg
 $ curl https://raw.githubusercontent.com/ssup2-playground/eks-neuron_serving-inf1-app/refs/heads/master/images/tiger.jpg -o tiger.jpg
 $ curl https://raw.githubusercontent.com/ssup2-playground/eks-neuron_serving-inf1-app/refs/heads/master/images/strawberry.jpg -o strawberry.jpg
 
 # "/resnet50" API
 # Processing a image on a inferentia core
-$ curl -F "file=@kitten_small.jpg" $echo $ENDPOINT_INF1/resnet50
+$ curl -F "file=@kitten.jpg" $(echo $ENDPOINT_INF1/resnet50)
 {"tabby":"0.5812537670135498","Egyptian_cat":"0.22762224078178406","tiger_cat":"0.10100676119327545","lynx":"0.07389812916517258","tiger":"0.010001023299992085"}
-$ curl -F "file=@tiger.jpg" $echo $ENDPOINT_INF1/resnet50
+$ curl -F "file=@tiger.jpg" $(echo $ENDPOINT_INF1/resnet50)
 {"tiger":"0.9340131282806396","tiger_cat":"0.05970945954322815","jaguar":"0.0014042318798601627","zebra":"0.0005853709881193936","tabby":"0.0003550454566720873"}%
-$ curl -F "file=@strawberry.jpg" $echo $ENDPOINT_INF1/resnet50
+$ curl -F "file=@strawberry.jpg" $(echo $ENDPOINT_INF1/resnet50)
 {"strawberry":"0.9997598528862","banana":"5.1432507461868227e-05","pineapple":"3.762882261071354e-05","lemon":"2.144025893358048e-05","trifle":"1.3842871339875273e-05"}%
 
 # "/resnet50_batch" API
 # Processing mutiple images on multiple inferentia cores
 # In order to use all inferentia cores uniformly, the number of images must be requested as a multiple of the number of inferentia cores assigned to the pod. 
-$ curl -F "files=@tiger.jpg" -F "files=@tiger.jpg" -F "files=@strawberry.jpg" $echo $ENDPOINT_INF1/resnet50_batch
-[{"tiger":"0.9340131282806396","tiger_cat":"0.05970945954322815","jaguar":"0.0014042318798601627","zebra":"0.0005853709881193936","tabby":"0.0003550454566720873"},{"tiger":"0.9340131282806396","tiger_cat":"0.05970945954322815","jaguar":"0.0014042318798601627","zebra":"0.0005853709881193936","tabby":"0.0003550454566720873"},{"strawberry":"0.9997598528862","banana":"5.1432507461868227e-05","pineapple":"3.762882261071354e-05","lemon":"2.144025893358048e-05","trifle":"1.3842871339875273e-05"}]
+$ curl -F "files=@kitten.jpg" -F "files=@tiger.jpg" -F "files=@strawberry.jpg" $(echo $ENDPOINT_INF1/resnet50_batch)
+[{"tabby":"0.5812537670135498","Egyptian_cat":"0.22762224078178406","tiger_cat":"0.10100676119327545","lynx":"0.07389812916517258","tiger":"0.010001023299992085"},{"tiger":"0.9340131282806396","tiger_cat":"0.05970945954322815","jaguar":"0.0014042318798601627","zebra":"0.0005853709881193936","tabby":"0.0003550454566720873"},{"strawberry":"0.9997598528862","banana":"5.1432507461868227e-05","pineapple":"3.762882261071354e-05","lemon":"2.144025893358048e-05","trifle":"1.3842871339875273e-05"}]%
 ```
 
 ## Monitoring
