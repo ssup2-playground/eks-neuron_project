@@ -5,6 +5,21 @@ eks-neuron is prototyping project for testing inferentia/trainium instances base
 * [aws-terraform](https://github.com/ssup2-playground/eks-neuron_aws-terraform) : Terraform for EKS cluster and inferentia/trainium instances.
 * [serving-inf1-app](https://github.com/ssup2-playground/eks-neuron_serving-inf1-app) : ML model serving application based on inferentia 1 and FastAPI.
 
+## Install
+
+* Run terraform
+
+```bash
+# Get terraform code
+$ git clone https://github.com/ssup2-playground/eks-neuron_aws-terraform.git && rm ./eks-neuron_aws-terraform/terraform.tf
+
+# Run terraform
+$ cd eks-neuron_aws-terraform
+$ terraform init
+$ terraform apply -target="module.karpenter"
+$ terraform apply
+```
+
 ## Architecture
 
 <img src="/images/architecture.png" width="800"/>
@@ -27,21 +42,6 @@ eks-neuron is prototyping project for testing inferentia/trainium instances base
 * **Neuron device plugin** makes the kubelet aware of the inferentia core.
 * **Neuron monitor** provides inferentia/trainium metrics to prometheus server. 
 * **Node problem detector** detects failure inferentia/trainium cores.
-
-## Install
-
-* Run terraform
-
-```bash
-# Get terraform code
-$ git clone https://github.com/ssup2-playground/eks-neuron_aws-terraform.git && rm ./eks-neuron_aws-terraform/terraform.tf
-
-# Run terraform
-$ cd eks-neuron_aws-terraform
-$ terraform init
-$ terraform apply -target="module.karpenter"
-$ terraform apply
-```
 
 ## Serving Inf1 App
 
