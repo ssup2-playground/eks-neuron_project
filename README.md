@@ -28,6 +28,21 @@ eks-neuron is prototyping project for testing inferentia/trainium instances base
 * **Neuron monitor** provides inferentia/trainium metrics to prometheus server. 
 * **Node problem detector** detects failure inferentia/trainium cores.
 
+## Install
+
+* Run terraform
+
+```bash
+# Get terraform code
+$ git clone https://github.com/ssup2-playground/eks-neuron_aws-terraform.git && rm ./eks-neuron_aws-terraform/terraform.tf
+
+# Run terraform
+$ cd eks-neuron_aws-terraform
+$ terraform init
+$ terraform apply -target="module.karpenter"
+$ terraform apply
+```
+
 ## Serving Inf1 App
 
 * based on inferentia 1 and FastAPI
